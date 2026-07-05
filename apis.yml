@@ -1,0 +1,97 @@
+aid: heska
+url: https://raw.githubusercontent.com/api-evangelist/heska/refs/heads/main/apis.yml
+name: Heska
+kind: company
+description: Heska is a veterinary diagnostics company that makes in-clinic point-of-care
+  lab analyzers and imaging for veterinary practices - chemistry (Element DC/DCX/RC/RCX),
+  hematology (Element HT5), blood gas and electrolytes (Element POC), immunodiagnostics
+  (Element i), coagulation (Element COAG), and AI-guided urine/fecal/blood-morphology
+  testing (Element AIM) - plus the HeskaView Connect lab data and workflow software.
+  Heska was acquired by Antech Diagnostics, a subsidiary of Mars, Incorporated (Mars
+  Petcare / Mars Science & Diagnostics), in 2023, and now operates as an Antech company.
+  Heska exposes a partner-gated integration API that bidirectionally connects its
+  analyzers to veterinary practice information management systems (PIMS/EMR) - orders
+  flow out to the analyzers and results flow back into the patient record - but there
+  is no public, self-service developer portal, published API reference, OpenAPI, or
+  public pricing. Access is provisioned to approved integration partners (ezyVet,
+  Instinct, Vetspire, NectarVet, Digitail, and others) via API Partner credentials.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Veterinary
+- Diagnostics
+- Animal Health
+- Point of Care
+- Lab Analyzers
+- Partner API
+- Antech
+- Mars
+created: '2026-07-05'
+modified: '2026-07-05'
+specificationVersion: '0.19'
+apis:
+- aid: heska:heska-lab-orders-api
+  name: Heska Lab Orders API
+  tags:
+  - Orders
+  - Point of Care
+  - Analyzers
+  - Partner API
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.ezyvet.com/en/see-all-integrations/diagnostic-tests/heska
+  properties:
+  - url: https://docs.ezyvet.com/en/see-all-integrations/diagnostic-tests/heska
+    type: Documentation
+  description: Partner-gated integration surface for placing point-of-care laboratory
+    orders from a practice information management system to Heska in-clinic analyzers.
+    A completed order in the PIMS triggers a request to the analyzer to run the
+    selected panel. No public API reference, base URL, or OpenAPI is published;
+    endpoints are modeled from documented partner integration behavior (ezyVet,
+    Instinct) and are not verified against a public specification.
+- aid: heska:heska-analyzer-results-api
+  name: Heska Analyzer Results API
+  tags:
+  - Results
+  - Analyzers
+  - Diagnostics
+  - Partner API
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.heska.com/product/heskaview-connect/
+  properties:
+  - url: https://www.heska.com/product/heskaview-connect/
+    type: Documentation
+  description: Partner-gated integration surface for returning completed analyzer
+    results back into the ordering PIMS patient record. HeskaView Connect provides
+    consolidated reports, unlimited analyzer connections, rapid retrieval, and
+    bidirectional communication so results upload automatically into patient files.
+    No public API reference, base URL, or OpenAPI is published; endpoints are
+    modeled from documented partner integration behavior and are not verified
+    against a public specification.
+- aid: heska:heska-patients-api
+  name: Heska Patients API
+  tags:
+  - Patients
+  - Records
+  - PIMS
+  - Partner API
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://careville.instinct.vet/instinct-emr/instinct-emr-user-manuals/integrations/heska-point-of-care-diagnostics/
+  properties:
+  - url: https://careville.instinct.vet/instinct-emr/instinct-emr-user-manuals/integrations/heska-point-of-care-diagnostics/
+    type: Documentation
+  description: Partner-gated integration surface for associating a lab order and its
+    results with a patient/owner record so diagnostic charts are created and updated
+    automatically in the integrating EMR. No public API reference, base URL, or
+    OpenAPI is published; this is modeled from documented partner integration
+    behavior and is not verified against a public specification.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/heska-corporation
+- type: Website
+  url: https://www.heska.com/
+- type: Documentation
+  url: https://customerportal.heska.com/
+- type: Registration
+  url: https://registration.heska.com/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

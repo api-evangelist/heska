@@ -1,0 +1,100 @@
+aid: heska
+name: Heska
+review:
+  question: Does Heska expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-05'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Heska does not publish a public API of
+    any protocol - there is no public developer portal, API reference, or
+    OpenAPI - so there is no documented server-push transport (WebSocket or
+    SSE) to model. Heska's integration surface is a partner-gated,
+    request/response style order-and-result exchange between its in-clinic
+    analyzers and veterinary practice information management systems (PIMS/EMR),
+    provisioned privately to approved integration partners.
+findings:
+  summary: |
+    Heska does not publish a documented public WebSocket API. Heska is a
+    veterinary diagnostics company (in-clinic point-of-care analyzers and
+    imaging) that was acquired by Antech Diagnostics, a subsidiary of Mars,
+    Incorporated, in 2023, and now operates as an Antech company. Heska does
+    expose an integration API, but it is partner-gated: there is no public,
+    self-service developer portal, no published API reference, no OpenAPI, and
+    no public base URL or pricing. Access is granted to approved practice
+    management / EMR partners (ezyVet, Instinct, Vetspire, NectarVet, Digitail,
+    and others) through "API Partner" credentials. The integration is a
+    bidirectional order-and-result exchange - a PIMS places a point-of-care lab
+    order, the analyzer runs the panel, and results flow back into the patient
+    record (surfaced to clinics via HeskaView Connect). No realtime,
+    bidirectional, or streaming WebSocket (ws:// or wss://) endpoint is
+    documented anywhere in Heska's public materials as of the review date.
+  publicApi: false
+  accessModel: |
+    Partner-gated. Heska provisions integration credentials ("API Partner"
+    client credentials) to approved PIMS/EMR vendors rather than offering
+    open developer signup. The only public documentation of the integration
+    lives in the partner PIMS knowledge bases (e.g. ezyVet, Instinct), not on
+    a Heska developer portal.
+  ownership: |
+    Heska was acquired by Antech Diagnostics in 2023 (transaction closed
+    mid-2023). Antech is part of Mars, Incorporated (Mars Petcare / Mars
+    Science & Diagnostics). Heska now operates as "Heska, an Antech company,"
+    with product pages appearing under both heska.com and antechdiagnostics.com.
+  transports:
+    - protocol: Partner Integration (HTTP)
+      scheme: https
+      documented: false
+      note: Order-and-result exchange between Heska analyzers and PIMS/EMR
+        systems, provisioned to approved partners. No public base URL or
+        reference is published; behavior is documented only in partner PIMS
+        knowledge bases.
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API reference or base URL is published by Heska.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere in Heska's public
+        materials as of the review date.
+  endpointsModeled: true
+  endpointsModeledNote: |
+    The three APIs listed in apis.yml (Lab Orders, Analyzer Results, Patients)
+    are logical groupings modeled from documented partner integration behavior,
+    not from a published Heska specification. No concrete public endpoints,
+    base URLs, or request/response schemas are asserted, because none are
+    published.
+sources:
+  - url: https://www.heska.com/
+    type: Website
+    note: Heska (an Antech company) product site - in-clinic diagnostics and analyzers.
+  - url: https://www.heska.com/product/heskaview-connect/
+    type: Documentation
+    note: HeskaView Connect lab data and workflow software - bidirectional
+      analyzer-to-PIMS communication; no developer API reference.
+  - url: https://docs.ezyvet.com/en/see-all-integrations/diagnostic-tests/heska
+    type: Documentation
+    note: ezyVet knowledge base for the Heska API integration - configured with
+      API Partner credentials provisioned to the PIMS, not open signup.
+  - url: https://careville.instinct.vet/instinct-emr/instinct-emr-user-manuals/integrations/heska-point-of-care-diagnostics/
+    type: Documentation
+    note: Instinct EMR manual describing the Heska point-of-care order/result flow.
+  - url: https://customerportal.heska.com/
+    type: Documentation
+    note: Antech In-House Diagnostics customer portal (technical docs and software
+      updates) - a customer resource library, not a developer API portal.
+  - url: https://www.linkedin.com/company/heska-corporation
+    type: LinkedIn
+    note: Confirms Heska is a subsidiary of Mars, Inc. and an Antech company.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface exists, and Heska publishes no public API of
+    any protocol. This entry is an honest stub: it records the company, its
+    Mars/Antech ownership, and its partner-gated integration model, with the
+    order/result/patient APIs modeled from documented partner behavior rather
+    than fabricated. No AsyncAPI document was created because there is no public
+    server-push transport - or any public API surface - on Heska's side to model.
