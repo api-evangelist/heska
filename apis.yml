@@ -84,6 +84,8 @@ apis:
     OpenAPI is published; this is modeled from documented partner integration
     behavior and is not verified against a public specification.
 common:
+- type: DomainSecurity
+  url: security/heska-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/heska-corporation
 - type: Website
