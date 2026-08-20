@@ -43,6 +43,11 @@ apis:
 - aid: heska:heska-lab-orders-api
   name: Heska Lab Orders API
   tags:
+  - Order
+  - Point of Care
+  - Analyzers
+  - Partner API
+  tags_raw:
   - Orders
   - Point of Care
   - Analyzers
