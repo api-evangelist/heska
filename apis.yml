@@ -15,6 +15,17 @@ description: Heska is a veterinary diagnostics company that makes in-clinic poin
   is no public, self-service developer portal, published API reference, OpenAPI, or
   public pricing. Access is provisioned to approved integration partners (ezyVet,
   Instinct, Vetspire, NectarVet, Digitail, and others) via API Partner credentials.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
