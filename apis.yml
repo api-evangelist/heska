@@ -1,5 +1,7 @@
 aid: heska
 url: https://raw.githubusercontent.com/api-evangelist/heska/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
 name: Heska
 kind: company
 description: Heska is a veterinary diagnostics company that makes in-clinic point-of-care
