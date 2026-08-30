@@ -113,6 +113,11 @@ apis:
     OpenAPI is published; this is modeled from documented partner integration
     behavior and is not verified against a public specification.
 common:
+- type: ParentCompany
+  url: https://apis.io/providers/antech-diagnostics/
+  name: Antech Diagnostics
+  x-relationship: acquired
+  x-evidence: "Heska was acquired by Antech Diagnostics, a subsidiary of Mars, Incorporated (Mars Petcare / Mars Science & Diagnostics), in 2023, and now operates as an Antech company."
 - type: DomainSecurity
   url: security/heska-domain-security.yml
 - type: LinkedIn
