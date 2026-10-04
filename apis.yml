@@ -56,6 +56,7 @@ modified: '2026-07-05'
 specificationVersion: '0.23'
 apis:
 - aid: heska:heska-lab-orders-api
+  endpointsModeled: true
   name: Heska Lab Orders API
   tags:
   - Order
@@ -79,6 +80,7 @@ apis:
     endpoints are modeled from documented partner integration behavior (ezyVet,
     Instinct) and are not verified against a public specification.
 - aid: heska:heska-analyzer-results-api
+  endpointsModeled: true
   name: Heska Analyzer Results API
   tags:
   - Results
@@ -98,6 +100,7 @@ apis:
     modeled from documented partner integration behavior and are not verified
     against a public specification.
 - aid: heska:heska-patients-api
+  endpointsModeled: true
   name: Heska Patients API
   tags:
   - Patients
