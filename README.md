@@ -1,4 +1,4 @@
-# Heska (heska)
+# Heska
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,69 +64,86 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Heska is a veterinary diagnostics company that makes in-clinic point-of-care lab analyzers and imaging for veterinary practices - chemistry (Element DC/DCX/RC/RCX), hematology (Element HT5), blood gas and electrolytes (Element POC), immunodiagnostics (Element i), coagulation (Element COAG), and AI-guided urine/fecal/blood-morphology testing (Element AIM) - plus the HeskaView Connect lab data and workflow software.
+Heska is a veterinary diagnostics company that makes in-clinic point-of-care lab analyzers and imaging for veterinary practices - chemistry (Element DC/DCX/RC/RCX), hematology (Element HT5), blood gas and electrolytes (Element POC), immunodiagnostics (Element i), coagulation (Element COAG), and AI-guided urine/fecal/blood-morphology testing (Element AIM) - plus the HeskaView Connect lab data and workflow software. Heska was acquired by Antech Diagnostics, a subsidiary of Mars, Incorporated (Mars Petcare / Mars Science & Diagnostics), in 2023, and now operates as an Antech company. Heska exposes a partner-gated integration API that bidirectionally connects its analyzers to veterinary practice information management systems (PIMS/EMR) - orders flow out to the analyzers and results flow back into the patient record - but there is no public, self-service developer portal, published API reference, OpenAPI, or public pricing. Access is provisioned to approved integration partners (ezyVet, Instinct, Vetspire, NectarVet, Digitail, and others) via API Partner credentials.
 
-**Ownership:** Heska was acquired by **Antech Diagnostics** in 2023 and now operates as "Heska, an Antech company." Antech is a subsidiary of **Mars, Incorporated** (Mars Petcare / Mars Science & Diagnostics). Product pages appear under both `heska.com` and `antechdiagnostics.com`.
+**Areas:** Veterinary · Diagnostics · Animal Health · Point of Care · Lab Analyzers · Partner API · Antech · Mars
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/heska/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/heska/refs/heads/main/apis.yml)
+## Heska on APIs.io
 
-## API Access Model — Partner-Gated (No Public Developer API)
+Everything profiled for Heska is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/heska/](https://apis.io/providers/heska/)** — or go straight to one of the APIs or properties below.
 
-This is an **honest stub**. Heska **does** operate an integration API, but it is **not a public, self-service developer API**:
+### APIs (3)
 
-- There is **no public developer portal**, no published API reference, no OpenAPI, and no public base URL.
-- There is **no public pricing** for API access; diagnostics and integrations are sold via contact-sales / the practice relationship.
-- Access is **provisioned to approved integration partners** — practice information management systems (PIMS) and EMRs — using **"API Partner" client credentials**, not open developer signup.
-- The integration is a **bidirectional order-and-result exchange**: a PIMS places a point-of-care lab order, the analyzer runs the panel, and results flow back into the patient record. Clinics see this through **HeskaView Connect**.
+- [Heska Lab Orders API](https://apis.io/apis/heska/heska-lab-orders-api/) — Partner-gated integration surface for placing point-of-care laboratory orders from a practice information management system to Heska in-clinic analyzers. A…
+- [Heska Analyzer Results API](https://apis.io/apis/heska/heska-analyzer-results-api/) — Partner-gated integration surface for returning completed analyzer results back into the ordering PIMS patient record. HeskaView Connect provides…
+- [Heska Patients API](https://apis.io/apis/heska/heska-patients-api/) — Partner-gated integration surface for associating a lab order and its results with a patient/owner record so diagnostic charts are created and updated…
 
-The only public documentation of the integration lives in partner PIMS knowledge bases — for example **ezyVet**, **Instinct**, **Vetspire**, **NectarVet**, and **Digitail** — rather than on a Heska developer portal.
+### Published properties
 
-## Tags
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- Veterinary
-- Diagnostics
-- Animal Health
-- Point of Care
-- Lab Analyzers
-- Partner API
-- Antech
-- Mars
+#### Security (1)
 
-## Timestamps
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Created:** 2026-07-05
-- **Modified:** 2026-07-05
+- [Heska Domain Security](https://apis.io/security/heska/heska-domain-security/)
 
-## APIs (Modeled)
+## Where to find this API
 
-The APIs below are **logical groupings modeled from documented partner integration behavior**, not from a published Heska specification. No concrete public endpoints, base URLs, or schemas are asserted because none are published.
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-### Heska Lab Orders API
-
-Partner-gated surface for placing point-of-care laboratory orders from a PIMS to Heska in-clinic analyzers. A completed order in the PIMS triggers the analyzer to run the selected panel.
-
-- **Reference:** [ezyVet Heska integration](https://docs.ezyvet.com/en/see-all-integrations/diagnostic-tests/heska)
-
-### Heska Analyzer Results API
-
-Partner-gated surface for returning completed analyzer results back into the ordering PIMS patient record. HeskaView Connect provides consolidated reports, unlimited analyzer connections, and bidirectional communication so results upload automatically into patient files.
-
-- **Reference:** [HeskaView Connect](https://www.heska.com/product/heskaview-connect/)
-
-### Heska Patients API
-
-Partner-gated surface for associating an order and its results with a patient/owner record so diagnostic charts are created and updated automatically in the integrating EMR.
-
-- **Reference:** [Instinct EMR — Heska point-of-care diagnostics](https://careville.instinct.vet/instinct-emr/instinct-emr-user-manuals/integrations/heska-point-of-care-diagnostics/)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/heska-corporation)
 - [Website](https://www.heska.com/)
-- [Documentation — Customer Portal](https://customerportal.heska.com/)
-- [Registration](https://registration.heska.com/)
+- [Documentation](https://customerportal.heska.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 9.7** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 13.2 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/heska/](https://apis.io/providers/heska/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Heska: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/heska/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
